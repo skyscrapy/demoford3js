@@ -1,4 +1,5 @@
 # demoford3js
-# install npm and bower first
+# install npm and bower and mongodb first
 # then npm install
-# run server.js
+# npm start
+# go to localhost:8080
