@@ -1,0 +1,37 @@
+<div class="btn-group">
+    <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Race'">Race</label>
+    <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Gender'">Gender</label>
+    <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Age'">Age</label>
+</div>
+
+<div id="diseaseTBL" style="float: left; width:30%; padding-left: 100px; font-family: times">
+    <table>
+        <tr>
+            <th>Disease</th>
+            <th>Ratio</th>
+        </tr>
+        <tr ng-repeat="x in queryResult" ng-click="showRelation(x)">
+            <td>{{ x.gender.gender }} {{x.race.race}} {{x.age.age}}   </td>
+            <td>{{ x.details }}</td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>456</td>
+        </tr>
+        <tr>
+            <td>323</td>
+            <td>123</td>
+        </tr>
+        <tr>
+            <td>323</td>
+            <td>123</td>
+        </tr>
+        <tr>
+            <td>323</td>
+            <td>123</td>
+        </tr>
+    </table>
+
+
+
+</div>

@@ -1,0 +1,57 @@
+
+    <div align="center">
+        <form name="queryForm" ng-submit="queryDisease()">
+            <label style="font-size:25px；font-family:times;"> Sex </label>
+            <select ng-model="formData.selectedGender"
+                    ng-options="gender.gender for gender in genderModel">
+            </select>
+            <label style="font-size:25px；font-family:times;"> Race </label>
+            <select ng-model="formData.selectedRace"
+                    ng-options="race.race for race in raceModel">
+            </select>
+            <label style="font-size:25px；font-family:times;"> Age </label>
+            <select ng-model="formData.selectedAge"
+                    ng-options="age.age for age in ageModel">
+            </select>
+            <input ng-model="formData.details" placeholder="optional" ng-init="min = 0" style="width: 100px;">
+            <input type="submit" value="Search" class="btnSubmit">
+        </form>
+    </div>
+    <div id="graphDisplaySection" style="align:center; padding-top: 50px">
+        <div id="diseaseTBL" style="float: left; width:30%; padding-left: 100px; font-family: times">
+            <table>
+                <tr>
+                    <th>Disease</th>
+                    <th>Ratio</th>
+                </tr>
+                <tr ng-repeat="x in queryResult" ng-click="showRelation(x)">
+                    <td>{{ x.gender.gender }} {{x.race.race}} {{x.age.age}}   </td>
+                    <td>{{ x.details }}</td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>456</td>
+                </tr>
+                <tr>
+                    <td>323</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>323</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>323</td>
+                    <td>123</td>
+                </tr>
+            </table>
+
+        </div>
+        <div id="relationGraph" style="float: left; width:70%">
+            <graph-visualization val="data"></graph-visualization>
+        </div>
+        <!-- Single button -->
+        <div class="btn-group" dropdown is-open="status.isopen">
+
+        </div>
+    </div>
